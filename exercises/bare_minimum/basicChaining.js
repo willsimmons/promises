@@ -14,7 +14,17 @@ var Promise = require('bluebird');
 
 
 var fetchProfileAndWriteToFile = function(readFilePath, writeFilePath) {
-  // TODO
+  return fs.readFile(readFilePath,function(err, data) {
+    data += data;
+    data.toString();
+    data = data.split('\n');
+    return data[0]; 
+  }).then(
+     ///get request -included the request functionality
+     ///result.profile? parseJSON
+  ).then(
+    //writefile path with "this"
+  ).catch(//error handling function)
 };
 
 // Export these functions so we can test them
